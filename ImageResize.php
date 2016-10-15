@@ -275,13 +275,12 @@ class ImageResize {
 * Cette function de la documentation de php (php.net)
 **/
 function createthumb($data, $newname, $new_w, $new_h, $border=false, $transparency=true, $base64=false) {
-    /*if(file_exists($newname))
+    if(file_exists($newname)){
         @unlink($newname);
-    if(!file_exists($name))
-        return false;*/
+    }
+    
     $arr = explode(".",$data['name']);
     $ext = $arr[sizeof($arr)-1];
-    echo $ext;
 
     if($ext=="jpeg" || $ext=="jpg"){
         $img = @imagecreatefromjpeg($data['src']);
