@@ -87,10 +87,9 @@ class ImageResize {
                     }else{
                         $this->new_file_name = $this->image_data['name'][$x];
                     }
-                                         
-                    $this->curr_tmp_name = $this->image_data['tmp_name'][$x];
+                    
                     $this->image_res = $this->get_image_resource();
-                    $this->save_dir = $this->destination_dir;                    
+                    $this->save_dir = $this->destination_dir;               
                     //do not resize if image is smaller than max size
                     if($this->image_width <= $this->image_max_size || $this->image_height <= $this->image_max_size){                 
                         $this->new_width = $this->image_width;
@@ -278,7 +277,7 @@ function createthumb($data, $newname, $new_w, $new_h, $border=false, $transparen
     if(file_exists($newname)){
         @unlink($newname);
     }
-    
+
     $arr = explode(".",$data['name']);
     $ext = $arr[sizeof($arr)-1];
 
