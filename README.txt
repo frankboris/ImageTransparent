@@ -1,0 +1,1 @@
+ce code permet de créer des miniatures d'images et des thumbnails.
